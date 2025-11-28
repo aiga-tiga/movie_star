@@ -6,10 +6,16 @@ import Navbar from './components/Navbar/Navbar.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import TitleCards from './components/TitleCards/TitleCards.jsx'
 
-export default function App() {
+const App = () => {
   return (
     <div>
-      <Home/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/player/:id' element={<Player/>}/> 
+      </Routes>
     </div>
   )
 }
+
+export default App

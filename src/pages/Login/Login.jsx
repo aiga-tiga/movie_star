@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './Login.css'
 import logo from '../../assets/logo.png'
+import { Link } from 'react-router-dom';
+
 
 const Login = () => {
 
@@ -8,7 +10,9 @@ const Login = () => {
 
   return (
     <div className='login'>
-      <img src={logo} className="login-logo" alt='' />
+<Link to="/">
+  <img src={logo} className="login-logo" alt="Logo" />
+</Link>
       <div className="login-form">
         <h1>{signState}</h1>
         <form>
@@ -22,6 +26,7 @@ const Login = () => {
               <label htmlFor=''>Remember Me</label>
             </div>
             <p>Need Help</p>
+
           </div>
         </form>
         <div className="form-switch">

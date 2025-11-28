@@ -1,15 +1,17 @@
 import React from 'react'
 import Home from './pages/Home/Home.jsx'
-import Login from './pages/Login/Login.jsx'
-import Player from './pages/Player/Player.jsx'
-import Navbar from './components/Navbar/Navbar.jsx'
-import Footer from './components/Footer/Footer.jsx'
-import TitleCards from './components/TitleCards/TitleCards.jsx'
+import { Routes, Route } from 'react-router-dom'
+import Login from './pages/Login/Login'
 
-export default function App() {
+const App = () => {
   return (
     <div>
-      <Home/>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/login" element={<Login />}/>
+      </Routes>
     </div>
   )
 }
+
+export default App

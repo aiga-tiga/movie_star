@@ -41,36 +41,11 @@
 .navbar-right .profile{
     width: 35px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .navbar-profile{
     display: flex;  
     align-items: center;
     gap: 10px;
-    cursor: pointer;
-    position: relative;
-}
-
-.navbar .dropdown{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: max-content ;
-    background-color: #141414;
-    padding: 18px 22px;
-    border-radius: 2px;
-    text-decoration: underline;
-    z-index: 1;
-    margin-left: 10px;
-    display: none;
-}
-.navbar .dropdown p{
-   
-    font-size: 13x;
-    cursor: pointer;
-}
-
-.navbar-profile:hover .dropdown{
-    display: block;  
-    
 }

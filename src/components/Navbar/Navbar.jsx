@@ -23,12 +23,16 @@ export default function Navbar() {
             </ul>
         </div>
         <div className='navbar-right'>
-            <img src={search_icon} alt="" />
+            <img src={search_icon} alt="" className='icons'/>
             <p>Children</p>
-            <img src={bell_icon} alt="" />
-            <img src={profile_img} alt="" />
+            <img src={bell_icon} alt="" className='icons'/>
+            <div className="navbar-profile">
+            <img src={profile_img} alt="" className='profile'/>
             <img src={caret_icon} alt="" />
-
+            <div className="dropdown">
+              <p>Sign out of Movie Star</p>
+            </div>
+          </div>
         </div>
     </div>
   )

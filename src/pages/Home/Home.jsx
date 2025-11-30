@@ -6,6 +6,8 @@ import hero_title from '../../assets/hero_title.png'
 import play_icon from '../../assets/play_icon.png'
 import info_icon from '../../assets/info_icon.png'
 import TitleCards from '../../components/TitleCards/TitleCards'
+import { Link } from 'react-router-dom';
+
 
 
 export default function Home() {
@@ -25,10 +27,10 @@ export default function Home() {
          </div>
        </div>
        <div className="morecards">
-              <TitleCards title={"Top picks"}/>
-              <TitleCards title={"Only for Netflix"}/>
-              <TitleCards title={"Best in 2025"}/>
-              <TitleCards title={"Upcoming"}/>
+              <TitleCards title={"Top picks"} category={"top_rated"}/>
+              <TitleCards title={"Only for Netflix"} category={"popular"}/>
+              <TitleCards title={"Best in 2025"} category={"now_playing"}/>
+              <TitleCards title={"Upcoming"} category={"upcoming"}/>
 
        </div>
     </div>

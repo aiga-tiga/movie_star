@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import './Login.css'
 import logo from '../../assets/logo.png'
 import { Link } from 'react-router-dom';
+import netflix_spinner from '../../assets/netflix_spinner.gif'
 
 
 const Login = () => {
 
   const [signState, setSignState] = useState("Sign In");
+  const [loading, setLoading] = useState(false);
 
   return (
     <div className='login'>

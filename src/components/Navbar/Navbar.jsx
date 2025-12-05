@@ -6,6 +6,7 @@ import profile_img from '../../assets/profile_img.png'
 import './Navbar.css'
 import caret_icon from '../../assets/caret_icon.svg'
 import { useRef } from 'react'
+import { logout } from '../../firebase'
 
 
 export default function Navbar() {
@@ -46,7 +47,7 @@ export default function Navbar() {
             <img src={profile_img} alt="" className='profile'/>
             <img src={caret_icon} alt="" />
             <div className="dropdown">
-              <p>Sign out of Movie Star</p>
+              <p onClick={()=>{logout()}}>Sign out of Movie Star</p>
             </div>
           </div>
         </div>

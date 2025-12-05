@@ -6,6 +6,7 @@ import profile_img from '../../assets/profile_img.png'
 import './Navbar.css'
 import caret_icon from '../../assets/caret_icon.svg'
 import { useRef } from 'react'
+import { logout } from '../../firebase'
 import { useNavigate } from 'react-router-dom';
 
 

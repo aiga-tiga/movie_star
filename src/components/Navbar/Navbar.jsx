@@ -7,11 +7,19 @@ import './Navbar.css'
 import caret_icon from '../../assets/caret_icon.svg'
 import { useRef } from 'react'
 import { logout } from '../../firebase'
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function Navbar() {
+const navigate = useNavigate();
 
   const navRef = React.useRef();
+  const handleSignOut = () => {
+  // You can also clear auth tokens or user info here
+  navigate('/login'); // this will redirect to login page
+}
+
 
  useEffect(() => {
   window.addEventListener('scroll', () => {
@@ -47,7 +55,7 @@ export default function Navbar() {
             <img src={profile_img} alt="" className='profile'/>
             <img src={caret_icon} alt="" />
             <div className="dropdown">
-              <p onClick={()=>{logout()}}>Sign out of Movie Star</p>
+    <p onClick={() => navigate('/login')}>Sign out of Movie Star</p>
             </div>
           </div>
         </div>

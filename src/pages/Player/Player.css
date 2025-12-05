@@ -1,22 +1,133 @@
-.player{
-    height: 100vh;
-    display: flex;
+.player {
+  padding: 20px;
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.player img.back-arrow {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Side-by-side on desktop, stacked on mobile */
+.player-content {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.player-content iframe {
+  width: 60%;
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+.player-info {
+  width: 35%;
+  background-color: rgba(20, 20, 20, 0.9);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.player-info h2 {
+  font-size: 28px;
+  color: #e50914;
+  margin-bottom: 15px;
+}
+
+.player-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.star {
+  color: #555;
+  font-size: 20px;
+}
+
+.star.filled {
+  color: #ffb400;
+}
+
+.vote {
+  margin-left: 8px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.actors-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.actor {
+  text-align: center;
+  width: 60px;
+  font-size: 12px;
+}
+
+.actor img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+  transition: transform 0.2s;
+}
+
+.actor img:hover {
+  transform: scale(1.1);
+}
+
+.no-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.overview {
+  margin-top: 15px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .player-content {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}.player img{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 50px;
-    cursor: pointer;
-}
-.player iframe{
-    border-radius: 10px;
-}
-.player-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  }
+
+  .player-content iframe,
+  .player-info {
     width: 90%;
+  }
+
+  .player-content iframe {
+    height: 300px;
+  }
 }
